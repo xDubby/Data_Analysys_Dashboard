@@ -30,13 +30,12 @@ st.metric("Top vendite (milioni)", round(total_sales.head(1).values[0], 2))
 
 # Top 10 giochi più venduti
 st.subheader("🎮 Top 10 giochi più venduti")
-fig1, ax1 = plt.subplots()
+fig1, ax1 = plt.subplots(figsize=(14,7))
 total_sales.head(10).plot(kind='bar', ax=ax1, color='skyblue')
 plt.title('Top 10 Best Seller Games')
 plt.xlabel('Games')
 plt.ylabel('Sales (Millions)')
-plt.xticks(rotation=60)
-ax1.set_xticklabels(total_sales.index, fontsize=9, rotation=60, ha='right')
+plt.xticks(rotation=45)
 st.pyplot(fig1)
 
 # Vendite per piattaforma
