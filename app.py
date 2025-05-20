@@ -36,7 +36,7 @@ plt.title('Top 10 Best Seller Games')
 plt.xlabel('Games')
 plt.ylabel('Sales (Millions)')
 plt.xticks(rotation=60)
-ax1.set_xticklabels(top_10_games.index, fontsize=9, rotation=60, ha='right')
+ax1.set_xticklabels(total_sales.index, fontsize=9, rotation=60, ha='right')
 st.pyplot(fig1)
 
 # Vendite per piattaforma
