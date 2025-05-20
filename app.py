@@ -40,13 +40,15 @@ st.pyplot(fig1)
 
 # Vendite per piattaforma
 st.subheader("💾 Vendite globali per piattaforma")
-fig2, ax2 = plt.subplots()
+fig2, ax2 = plt.subplots(figsize=(14,6))
 sales_pp.plot(kind='bar', ax=ax2, color='green')
 plt.title('Total Sales by Platform')
 plt.xlabel('Platform')
 plt.ylabel('Sales (Millions)')
-plt.xticks(rotation=45)
+plt.xticks(rotation=75, ha='right')
+plt.tight_layout()
 st.pyplot(fig2)
+
 
 # Vendite per anno
 st.subheader("📅 Vendite globali per anno")
