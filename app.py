@@ -35,7 +35,7 @@ total_sales.head(10).plot(kind='bar', ax=ax1, color='skyblue')
 plt.title('Top 10 Best Seller Games')
 plt.xlabel('Games')
 plt.ylabel('Sales (Millions)')
-plt.xticks(rotation=45)
+plt.xticks(rotation=60)
 st.pyplot(fig1)
 
 # Vendite per piattaforma
