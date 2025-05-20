@@ -24,12 +24,12 @@ sales_per_year = df_valid_years.groupby('Year')['Global_Sales'].sum()
 game_dist = df_clean.groupby('Genre')['Name'].count()
 
 # Mostra KPI
-st.subheader("📊 KPI principali")
+st.subheader("KPI principali")
 st.metric("Numero giochi unici", total_game)
 st.metric("Top vendite (milioni)", round(total_sales.head(1).values[0], 2))
 
 # Top 10 giochi più venduti
-st.subheader("🎮 Top 10 giochi più venduti")
+st.subheader("Top 10 giochi più venduti")
 fig1, ax1 = plt.subplots(figsize=(14,7))
 total_sales.head(10).plot(kind='bar', ax=ax1, color='skyblue')
 plt.title('Top 10 Best Seller Games')
@@ -39,7 +39,7 @@ plt.xticks(rotation=60)
 st.pyplot(fig1)
 
 # Vendite per piattaforma
-st.subheader("💾 Vendite globali per piattaforma")
+st.subheader("Vendite globali per piattaforma")
 fig2, ax2 = plt.subplots(figsize=(14,6))
 sales_pp.plot(kind='bar', ax=ax2, color='green')
 plt.title('Total Sales by Platform')
@@ -51,7 +51,7 @@ st.pyplot(fig2)
 
 
 # Vendite per anno
-st.subheader("📅 Vendite globali per anno")
+st.subheader("Vendite globali per anno")
 fig3, ax3 = plt.subplots()
 sales_per_year.plot(kind='line', ax=ax3, color='blue')
 plt.title('Total Global Sales by Year')
@@ -61,7 +61,7 @@ plt.xticks(rotation=45)
 st.pyplot(fig3)
 
 # Distribuzione per genere
-st.subheader("🎮 Distribuzione giochi per genere")
+st.subheader("Distribuzione giochi per genere")
 fig4, ax4 = plt.subplots()
 ax4.pie(game_dist, labels=game_dist.index, autopct='%1.1f%%', startangle=140)
 ax4.axis('equal')
