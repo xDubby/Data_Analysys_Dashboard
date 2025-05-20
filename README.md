@@ -1,5 +1,4 @@
-# Data_Analysys_Dashboard
-## Video Game Sales Dashboard
+# Video Game Sales Dashboard
 
 Analisi vendite e distribuzione videogame a livello globale.
 
