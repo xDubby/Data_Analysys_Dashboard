@@ -65,6 +65,3 @@ ax4.pie(game_dist, labels=game_dist.index, autopct='%1.1f%%', startangle=140)
 ax4.axis('equal')
 plt.title('Distribution by Genre')
 st.pyplot(fig4)
-
-# Footer
-st.write("Realizzato da Federico D'Ubaldi 🚀")
